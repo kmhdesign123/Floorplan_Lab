@@ -3,16 +3,18 @@ import Bath from './Bath'
 import Bedroom from './Bedroom'
 import LivingRoom from './LivingRoom'
 
-const FloorPlan = (props) => {
-
+function FloorPlan(props) {
+return(
     <div>
-      {props.rooms.map(room =>
-        <Bedroom key={room.size} room={room}/>
-      )}
+      <Bedroom bedNum={'1st'} />
       <Kitchen />
-      <Bath/>
-      <LivingRoom/>
+      <Bath size={'Full'} />
+      <Bedroom bedNum={'2nd'} />
+      <LivingRoom />
+      <Bath size={'Half'} />
+      <Bedroom bedNum={'3rd'} />
     </div>
+)
 
 }
 
